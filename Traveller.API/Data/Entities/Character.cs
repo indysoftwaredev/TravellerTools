@@ -13,6 +13,12 @@ namespace Traveller.API.Data.Entities
         [MaxLength(100)]
         [MinLength(2)]
         public string Name { get; set; } = "Traveller";
+        public int STR { get; set; }
+        public int DEX { get; set; }
+        public int END { get; set; }
+        public int INT { get; set; }
+        public int EDU { get; set; }
+        public int SOC { get; set; }
 
     }
 }

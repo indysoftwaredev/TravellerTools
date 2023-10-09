@@ -24,6 +24,18 @@
         <member name="M:Traveller.API.Migrations.Initialmigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:Traveller.API.Migrations.AddingCharacteristicstoCharacters">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.AddingCharacteristicstoCharacters.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.AddingCharacteristicstoCharacters.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.AddingCharacteristicstoCharacters.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="P:Traveller.API.Models.CharacterForCreationDto.Name">
             <summary>
             The name of the new character

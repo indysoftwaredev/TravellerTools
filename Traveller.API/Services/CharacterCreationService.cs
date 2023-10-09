@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+using Traveller.API.Business;
 using Traveller.API.Data.Entities;
 using Traveller.API.Models;
 
@@ -19,27 +18,20 @@ namespace Traveller.API.Services
 
         public async Task<CharacterDto> CreateCharacterAsync(CharacterForCreationDto characterForCreationDto)
         {
-            CharacterForCreationDto characterForCreationDto1 = _mapper.Map<CharacterForCreationDto>(characterForCreationDto);
-
             Character characterToCreate = _mapper.Map<Character>(characterForCreationDto);
 
+            characterToCreate.STR = DiceRoller.Roll(2, 6);
+            characterToCreate.DEX = DiceRoller.Roll(2, 6);
+            characterToCreate.END = DiceRoller.Roll(2, 6);
+            characterToCreate.INT = DiceRoller.Roll(2, 6);
+            characterToCreate.EDU = DiceRoller.Roll(2, 6);
+            characterToCreate.SOC = DiceRoller.Roll(2, 6);
+
             await _repository.CreateCharacterAsync(characterToCreate);
-            /*new Data.Entities.Character 
-            { 
-                Name = characterForCreationDto.Name 
-            });*/
 
             CharacterDto characterToReturn = _mapper.Map<CharacterDto>(characterToCreate);
 
-            /*CharacterDto characterDto = new CharacterDto
-            {
-                Id = characterEntity.Id,
-                Name = characterForCreationDto.Name
-            };*/
-
-            return characterToReturn;
-
-            
+            return characterToReturn;            
         }
     }
 }
