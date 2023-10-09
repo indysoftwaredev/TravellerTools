@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using Traveller.API.Data.DbContexts;
+using Traveller.API.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,7 +10,23 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(setupAction =>
+{
+    var xmlCommentsFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentsFile);
+    setupAction.IncludeXmlComments(xmlCommentsFullPath);
+});
+
+builder.Services.AddDbContext<CharacterDbContext>(
+    dbContextOptions => 
+    dbContextOptions
+        .UseSqlite(
+        builder.Configuration["ConnectionStrings:TravellerDbConnection"])
+);
+
+builder.Services.AddScoped<ICharacterRepository, CharacterRepository>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Traveller.API</name>
+    </assembly>
+    <members>
+        <member name="M:Traveller.API.Controllers.CharacterCreationController.CreateCharacterAsync(Traveller.API.Models.CharacterForCreationDto)">
+            <summary>
+            Create a new character
+            </summary>
+            <param name="createCharacterDto">The new character dto to be added</param>
+            <returns>The id of the new character</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Traveller.API.Migrations.Initialmigration">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.Initialmigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.Initialmigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.Initialmigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:Traveller.API.Models.CharacterForCreationDto.Name">
+            <summary>
+            The name of the new character
+            </summary>
+        </member>
+    </members>
+</doc>
