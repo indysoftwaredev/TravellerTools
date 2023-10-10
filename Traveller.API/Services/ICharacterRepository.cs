@@ -6,6 +6,7 @@ namespace Traveller.API.Services
     {
         Task<bool> SaveChangesAsync();
         Task<Character> CreateCharacterAsync(Character character);
+        Task<Character> GetCharacterAsync(int id);
 
     }
 }

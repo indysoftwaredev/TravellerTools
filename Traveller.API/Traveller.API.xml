@@ -12,6 +12,13 @@
             <returns>The id of the new character</returns>
             <exception cref="T:System.NotImplementedException"></exception>
         </member>
+        <member name="M:Traveller.API.Controllers.CharacterCreationController.GetCharacter(System.Int32)">
+            <summary>
+            Get an existing character
+            </summary>
+            <param name="id">The id of the character</param>
+            <returns>The character with the matching id</returns>
+        </member>
         <member name="T:Traveller.API.Migrations.Initialmigration">
             <inheritdoc />
         </member>

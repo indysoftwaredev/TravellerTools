@@ -33,8 +33,8 @@ namespace Traveller.API.UnitTests
         public async Task CreateCharacterAsync_ConstructCharacter_STR_MustBeBetween2And12()
         {
 
-            CharacterCreationService service =
-                new CharacterCreationService(_characterRepository.Object, _mapper);
+            CharacterService service =
+                new CharacterService(_characterRepository.Object, _mapper);
 
             for (int i = 0; i < 1000; i++)
             {
@@ -50,8 +50,8 @@ namespace Traveller.API.UnitTests
         public async Task CreateCharacterAsync_ConstructCharacter_DEX_MustBeBetween2And12()
         {
 
-            CharacterCreationService service =
-                new CharacterCreationService(_characterRepository.Object, _mapper);
+            CharacterService service =
+                new CharacterService(_characterRepository.Object, _mapper);
 
             for (int i = 0; i < 1000; i++)
             {
@@ -67,8 +67,8 @@ namespace Traveller.API.UnitTests
         public async Task CreateCharacterAsync_ConstructCharacter_END_MustBeBetween2And12()
         {
 
-            CharacterCreationService service =
-                new CharacterCreationService(_characterRepository.Object, _mapper);
+            CharacterService service =
+                new CharacterService(_characterRepository.Object, _mapper);
 
             for (int i = 0; i < 1000; i++)
             {
@@ -84,8 +84,8 @@ namespace Traveller.API.UnitTests
         public async Task CreateCharacterAsync_ConstructCharacter_INT_MustBeBetween2And12()
         {
 
-            CharacterCreationService service =
-                new CharacterCreationService(_characterRepository.Object, _mapper);
+            CharacterService service =
+                new CharacterService(_characterRepository.Object, _mapper);
 
             for (int i = 0; i < 1000; i++)
             {
@@ -101,8 +101,8 @@ namespace Traveller.API.UnitTests
         public async Task CreateCharacterAsync_ConstructCharacter_EDU_MustBeBetween2And12()
         {
 
-            CharacterCreationService service =
-                new CharacterCreationService(_characterRepository.Object, _mapper);
+            CharacterService service =
+                new CharacterService(_characterRepository.Object, _mapper);
 
             for (int i = 0; i < 1000; i++)
             {
@@ -118,8 +118,8 @@ namespace Traveller.API.UnitTests
         public async Task CreateCharacterAsync_ConstructCharacter_SOC_MustBeBetween2And12()
         {
 
-            CharacterCreationService service =
-                new CharacterCreationService(_characterRepository.Object, _mapper);
+            CharacterService service =
+                new CharacterService(_characterRepository.Object, _mapper);
 
             for (int i = 0; i < 1000; i++)
             {

@@ -25,19 +25,31 @@ namespace Traveller.API.Controllers
         /// <returns>The id of the new character</returns>
         /// <exception cref="NotImplementedException"></exception>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<CharacterDto>> CreateCharacterAsync(CharacterForCreationDto createCharacterDto)
         {
-            CharacterDto characterDto = await new CharacterCreationService(_repository, _mapper).CreateCharacterAsync(createCharacterDto);
-
-            return CreatedAtRoute("VerifyCharacteristics", new { id = characterDto.Id }, characterDto);
+            CharacterDto characterDto = await new CharacterService(_repository, _mapper).CreateCharacterAsync(createCharacterDto);
+            return CreatedAtRoute("GetCharacter", new { id = characterDto.Id }, characterDto);
         }
 
-        [HttpGet("{id}", Name ="VerifyCharacteristics")]
-        public async Task<ActionResult<CharacterDto>> VerifyCharacteristics(int id)
+        /// <summary>
+        /// Get an existing character
+        /// </summary>
+        /// <param name="id">The id of the character</param>
+        /// <returns>The character with the matching id</returns>
+        [HttpGet("{id}", Name ="GetCharacter")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<CharacterDto>> GetCharacter(int id)
         {
-            //get the character stats for display
-            throw new NotImplementedException();
+            CharacterDto characterDto = await new CharacterService(_repository, _mapper).GetCharacterAsync(id);
 
+            if(characterDto == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(characterDto);
         }
 
 }

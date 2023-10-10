@@ -1,4 +1,5 @@
-﻿using Traveller.API.Data.DbContexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Traveller.API.Data.DbContexts;
 using Traveller.API.Data.Entities;
 
 namespace Traveller.API.Services
@@ -17,6 +18,12 @@ namespace Traveller.API.Services
             await _context.AddAsync(character);
             await _context.SaveChangesAsync();
             return character;
+        }
+
+        public async Task<Character?> GetCharacterAsync(int id)
+        {
+            return await _context.Characters
+                .FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task<bool> SaveChangesAsync()
