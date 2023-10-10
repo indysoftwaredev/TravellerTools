@@ -34,7 +34,7 @@ namespace Traveller.API.Services
             return characterToReturn;            
         }
 
-        internal async Task<CharacterDto> GetCharacterAsync(int id)
+        public async Task<CharacterDto> GetCharacterAsync(int id)
         {
             Character character = await _repository.GetCharacterAsync(id);
             CharacterDto characterToReturn = _mapper.Map<CharacterDto>(character);

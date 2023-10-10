@@ -26,6 +26,7 @@ namespace Traveller.API.Controllers
         /// <exception cref="NotImplementedException"></exception>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<CharacterDto>> CreateCharacterAsync(CharacterForCreationDto createCharacterDto)
         {
             CharacterDto characterDto = await new CharacterService(_repository, _mapper).CreateCharacterAsync(createCharacterDto);

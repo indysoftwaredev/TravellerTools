@@ -20,7 +20,7 @@ namespace Traveller.API.Services
             return character;
         }
 
-        public async Task<Character?> GetCharacterAsync(int id)
+        public async Task<Character> GetCharacterAsync(int id)
         {
             return await _context.Characters
                 .FirstOrDefaultAsync(c => c.Id == id);
