@@ -2,7 +2,7 @@
 using Traveller.API.Data.DbContexts;
 using Traveller.API.Data.Entities;
 
-namespace Traveller.API.Services
+namespace Traveller.API.Services.Repositories
 {
     public class CharacterRepository : ICharacterRepository
     {

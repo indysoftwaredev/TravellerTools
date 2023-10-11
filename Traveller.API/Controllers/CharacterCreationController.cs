@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Traveller.API.Models;
 using Traveller.API.Services;
+using Traveller.API.Services.Repositories;
 
 namespace Traveller.API.Controllers
 {

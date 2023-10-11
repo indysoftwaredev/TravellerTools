@@ -4,6 +4,7 @@ using Traveller.API.Data.Entities;
 using Traveller.API.Models;
 using Traveller.API.Profiles;
 using Traveller.API.Services;
+using Traveller.API.Services.Repositories;
 
 namespace Traveller.API.UnitTests
 {

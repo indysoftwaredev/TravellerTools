@@ -2,6 +2,7 @@
 using Traveller.API.Business;
 using Traveller.API.Data.Entities;
 using Traveller.API.Models;
+using Traveller.API.Services.Repositories;
 
 namespace Traveller.API.Services
 {

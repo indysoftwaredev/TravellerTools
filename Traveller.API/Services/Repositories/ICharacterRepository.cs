@@ -1,6 +1,6 @@
 ﻿using Traveller.API.Data.Entities;
 
-namespace Traveller.API.Services
+namespace Traveller.API.Services.Repositories
 {
     public interface ICharacterRepository
     {
