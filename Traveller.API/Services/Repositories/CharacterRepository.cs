@@ -6,9 +6,9 @@ namespace Traveller.API.Services.Repositories
 {
     public class CharacterRepository : ICharacterRepository
     {
-        private readonly CharacterDbContext _context;
+        private readonly TravellerDbContext _context;
 
-        public CharacterRepository(CharacterDbContext context)
+        public CharacterRepository(TravellerDbContext context)
         {
             _context = context;
         }

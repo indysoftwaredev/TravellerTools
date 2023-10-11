@@ -43,6 +43,18 @@
         <member name="M:Traveller.API.Migrations.AddingCharacteristicstoCharacters.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:Traveller.API.Migrations.CreateSkillandSkillSpecializationTables">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.CreateSkillandSkillSpecializationTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.CreateSkillandSkillSpecializationTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Traveller.API.Migrations.CreateSkillandSkillSpecializationTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="P:Traveller.API.Models.CharacterForCreationDto.Name">
             <summary>
             The name of the new character

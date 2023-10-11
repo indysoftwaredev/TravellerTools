@@ -9,7 +9,7 @@ using Traveller.API.Data.DbContexts;
 
 namespace Traveller.API.Migrations
 {
-    [DbContext(typeof(CharacterDbContext))]
+    [DbContext(typeof(TravellerDbContext))]
     [Migration("20231009125144_Initial migration")]
     partial class Initialmigration
     {

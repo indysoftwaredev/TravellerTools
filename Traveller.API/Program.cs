@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen(setupAction =>
     setupAction.IncludeXmlComments(xmlCommentsFullPath);
 });
 
-builder.Services.AddDbContext<CharacterDbContext>(
+builder.Services.AddDbContext<TravellerDbContext>(
     dbContextOptions => 
     dbContextOptions
         .UseSqlite(

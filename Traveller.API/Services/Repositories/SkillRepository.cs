@@ -4,11 +4,11 @@ namespace Traveller.API.Services.Repositories
 {
     public class SkillRepository : ISkillRepository
     {
-        private readonly SkillDbContext _skillDbContext;
+        private readonly TravellerDbContext skillDbContext;
 
-        public SkillRepository(SkillDbContext skillDbContext)
+        public SkillRepository(TravellerDbContext skillDbContext)
         {
-            _skillDbContext = skillDbContext;
+            skillDbContext = skillDbContext;
         }
 
     }
