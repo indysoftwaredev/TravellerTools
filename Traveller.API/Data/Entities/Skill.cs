@@ -16,5 +16,7 @@ namespace Traveller.API.Data.Entities
         public ICollection<SkillSpecialization> SkillSpecializations { get; set; } = 
             new List<SkillSpecialization>();
 
+        public bool IsBackgroundSkill { get; set; } = false;
+
     }
 }
